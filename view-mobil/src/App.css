@@ -1,0 +1,127 @@
+#root {
+  margin: 0;
+  padding: 0;
+  font-family: "Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "home"
+    "main"
+    "footer";
+}
+
+.header {
+  padding: 2px;
+  grid-area: header;
+  height: 100%;
+  background: white;
+  display: grid;
+  grid-template-columns: auto auto;
+  border-bottom: 1px solid gainsboro;
+}
+
+.header-logo > img {
+  height: 40px;
+  background: white;
+}
+
+.header-menu {
+  justify-self: end;
+  align-self: center;
+}
+
+.header-menu > img {
+  margin-top: 2px;
+  height: 35px;
+  background: white;
+}
+
+/*  Home */
+.home {
+  grid-area: home;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.home-img {
+  height: 100%;
+  width: 100%;
+}
+
+.home-bg-img {
+  height: 300px;
+  width: auto;
+  background-size: calc(100% - 0px) calc(50px + 250px);
+  image-rendering: auto;
+  background-image: url("./assets/home.jpeg");
+  background-repeat: no-repeat;
+}
+
+.home-bg-img {
+  display: grid;
+  align-items: end;
+}
+
+.home-bg-img p {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.home-form {
+  height: auto;
+  background: #337529;
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.home-form p {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.form-input {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 5px;
+}
+
+.form-input input,
+button {
+  margin: auto 45px;
+  height: 35px;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.form-input .btn-search {
+  height: 100%;
+  background: #fdda01;
+  border: none;
+}
+
+.btn-search i {
+  font-size: 25px;
+}
+
+.home-info {
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  color: white;
+}
+
+@media (min-width: 375) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
